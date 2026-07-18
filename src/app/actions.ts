@@ -128,6 +128,30 @@ export async function updateConfig(data: any) {
   try {
     const galleryArray = data.galleryUrls ? data.galleryUrls.split(",").map((s: string) => s.trim()).filter(Boolean) : [];
     
+    // Try updating Supabase first
+    try {
+      const { error } = await supabase.from("website_config").upsert({
+        id: 1,
+        recipient_name: data.recipientName,
+        nickname: data.nickname || "",
+        age: data.age,
+        birthday_date: data.birthdayDate,
+        primary_color: data.primaryColor,
+        secondary_color: data.secondaryColor,
+        accent_color: data.accentColor,
+        gold_color: data.goldColor,
+        personal_message: data.personalMessage,
+        gift_message: data.giftMessage,
+        footer_message: data.footerMessage,
+        background_image_url: "",
+        background_music_url: data.musicUrl,
+        video_url: "",
+      });
+      if (error) console.error("Supabase upsert error:", error);
+    } catch (dbError) {
+      console.error("Failed to connect to Supabase:", dbError);
+    }
+
     // Generate the new config.ts content
     const newConfigContent = `export const config = {
   recipient: {
@@ -178,7 +202,11 @@ export async function updateConfig(data: any) {
 `;
 
     const configPath = path.join(process.cwd(), "src/config.ts");
-    fs.writeFileSync(configPath, newConfigContent, "utf8");
+    try {
+      fs.writeFileSync(configPath, newConfigContent, "utf8");
+    } catch (fsError) {
+      console.log("Could not write config.ts (Expected behavior in Vercel production)");
+    }
 
     // Force Next.js to revalidate everything
     revalidatePath("/", "layout");
