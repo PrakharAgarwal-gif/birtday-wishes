@@ -97,8 +97,8 @@ export default function PersonalLetter() {
                 transition={{ delay: messageLetters.length * 0.03 + 1 }}
                 className="mt-12 text-right"
               >
-                <p className="font-outfit text-xl text-pink-600">With love,</p>
-                <p className="font-inter text-gray-600">{config.messages.footerMessage.replace("Made with ❤️ by ", "")}</p>
+                <p className="font-outfit text-xl text-pink-600">Your friend,</p>
+                <p className="font-inter text-gray-600 text-lg">Prakhar</p>
               </motion.div>
             )}
           </motion.div>

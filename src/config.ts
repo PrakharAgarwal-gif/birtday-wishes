@@ -1,7 +1,7 @@
 export const config = {
   recipient: {
     name: "Yatharth",
-    nickname: "bhai",
+    nickname: "Yatharth",
     birthdayDate: "2026-07-19",
     age: 21,
     relationship: "Best Friend",
@@ -23,7 +23,16 @@ export const config = {
   messages: {
     landingTitle: "Someone has prepared something special just for you...",
     buttonText: "Open My Birthday Surprise",
-    personalMessage: "Wishing you the happiest of birthdays! You mean the world to me and I hope all your dreams come true.",
+    personalMessage: `Happy Birthday, buddy! 🎉
+I just wanted to take a moment to wish you an amazing year ahead. You're one of those friends who makes life more enjoyable just by being around. From random conversations and endless jokes to all the memorable moments we've shared, I'm really glad we've become such good friends.
+
+I hope this birthday brings you everything you've been working for—good health, happiness, success, and plenty of opportunities. Keep being the same hardworking, genuine, and fun person that you are. I'm sure you'll achieve all the goals you've set for yourself.
+
+Thanks for always being a great friend. Here's to making even more unforgettable memories together, celebrating more milestones, and supporting each other through whatever comes next.
+
+Enjoy your special day, have lots of fun, and don't forget to save me a piece of cake!
+
+Happy Birthday once again, Yatharth!`,
     giftMessage: "Here is a special surprise just for you!",
     footerMessage: "Made by Prakhar",
   },
