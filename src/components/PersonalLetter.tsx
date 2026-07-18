@@ -49,7 +49,7 @@ export default function PersonalLetter() {
           {/* The Letter */}
           <motion.div
             initial={{ y: 0, opacity: 0, zIndex: 20 }}
-            animate={isOpen ? { y: -200, opacity: 1, scale: 1.1, zIndex: 50 } : { y: 0, opacity: 0, scale: 1, zIndex: 20 }}
+            animate={isOpen ? { y: -80, opacity: 1, scale: 1.05, zIndex: 50 } : { y: 0, opacity: 0, scale: 1, zIndex: 20 }}
             transition={{ 
               delay: 0.5, 
               duration: 1.5, 
