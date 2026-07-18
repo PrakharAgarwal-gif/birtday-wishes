@@ -15,7 +15,7 @@ export default function PersonalLetter() {
   };
 
   return (
-    <section className="py-20 px-4 min-h-screen flex flex-col items-center justify-center relative">
+    <section className="pt-20 pb-[400px] md:pb-[500px] px-4 min-h-screen flex flex-col items-center justify-center relative">
       <h2 className="text-3xl md:text-5xl font-outfit text-white mb-16 text-center text-glow">
         A Special Message For You
       </h2>
