@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
-import { config } from "@/config";
+import { useConfig } from "@/app/ConfigContext";
 
 export default function ProfilePhoto() {
-  const photoUrl = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400"; // Placeholder profile
+  const config = useConfig();
+  const photoUrl = config.media.profilePhoto || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400";
 
   const handlePhotoClick = () => {
     // Random celebration effect
