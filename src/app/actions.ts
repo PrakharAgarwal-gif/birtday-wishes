@@ -30,50 +30,9 @@ export async function logoutAdmin() {
 // --- FETCH ACTIONS ---
 
 export async function getWebsiteConfig() {
-  try {
-    const { data, error } = await supabase.from("website_config").select("*").single();
-    if (error || !data) {
-      console.log("Using static config fallback");
-      return staticConfig;
-    }
-    // Map DB fields to config format
-    return {
-      recipient: {
-        name: data.recipient_name,
-        nickname: data.nickname,
-        age: data.age,
-        birthdayDate: data.birthday_date,
-        relationship: staticConfig.recipient.relationship,
-      },
-      theme: {
-        colors: {
-          primary: data.primary_color,
-          secondary: data.secondary_color,
-          accent: data.accent_color,
-          gold: data.gold_color,
-        },
-        fonts: staticConfig.theme.fonts,
-      },
-      messages: {
-        personalMessage: data.personal_message,
-        giftMessage: data.gift_message,
-        footerMessage: data.footer_message,
-      },
-      animations: staticConfig.animations,
-      media: {
-        background: data.background_image_url || staticConfig.media.background,
-        profilePhoto: staticConfig.media.profilePhoto,
-        music: data.background_music_url || staticConfig.media.music,
-        video: data.video_url || staticConfig.media.video,
-      },
-      timeline: staticConfig.timeline,
-      gallery: staticConfig.gallery,
-      quotes: staticConfig.quotes,
-      wishes: staticConfig.wishes,
-    };
-  } catch (e) {
-    return staticConfig;
-  }
+  // Always use local staticConfig as the single source of truth
+  // to ensure local changes appear on the live site immediately.
+  return staticConfig;
 }
 
 export async function getGuestWishes() {
