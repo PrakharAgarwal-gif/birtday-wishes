@@ -25,7 +25,7 @@ export const config = {
     buttonText: "Open My Birthday Surprise",
     personalMessage: "Wishing you the happiest of birthdays! You mean the world to me and I hope all your dreams come true.",
     giftMessage: "Here is a special surprise just for you!",
-    footerMessage: "Made with ❤️ by Taylor",
+    footerMessage: "Made by Prakhar",
   },
   media: {
     profilePhoto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000",
