@@ -30,7 +30,7 @@ export const config = {
   media: {
     profilePhoto: "https://photos.app.goo.gl/LujaMpVmHtE82kgBA",
     background: "https://images.unsplash.com/photo-1517260739337-6799d239ce83?q=80&w=2070&auto=format&fit=crop",
-    music: "/music.m4a",
+    music: "/music.webm",
     video: "",
   },
   animations: {
