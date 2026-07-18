@@ -44,7 +44,7 @@ export const config = {
         "year": "2020",
         "title": "We Met",
         "description": "The day we first met at the coffee shop.",
-        "image": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=500"
+        "image": "https://i.ibb.co/r2ngs43G/IMG20260114181701.jpg"
     },
     {
         "year": "2022",
