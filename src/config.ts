@@ -28,7 +28,7 @@ export const config = {
     footerMessage: "Made by Prakhar",
   },
   media: {
-    profilePhoto: "https://photos.app.goo.gl/LujaMpVmHtE82kgBA",
+    profilePhoto: "https://photos.fife.usercontent.google.com/pw/AP1GczP5YVVo_xruOdZ_QoC4IKBqYAyQk2Fva-dfO8DmUSbtyaz8AO2awnZM0Q=w514-h913-s-no-gm?authuser=0",
     background: "https://images.unsplash.com/photo-1517260739337-6799d239ce83?q=80&w=2070&auto=format&fit=crop",
     music: "/music.webm",
     video: "",
