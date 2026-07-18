@@ -1,7 +1,7 @@
 export const config = {
   recipient: {
     name: "Yatharth",
-    nickname: "Yatharth",
+    nickname: "bhai",
     birthdayDate: "2026-07-19",
     age: 21,
     relationship: "Best Friend",
@@ -23,23 +23,14 @@ export const config = {
   messages: {
     landingTitle: "Someone has prepared something special just for you...",
     buttonText: "Open My Birthday Surprise",
-    personalMessage: `Happy Birthday, buddy! 🎉
-I just wanted to take a moment to wish you an amazing year ahead. You're one of those friends who makes life more enjoyable just by being around. From random conversations and endless jokes to all the memorable moments we've shared, I'm really glad we've become such good friends.
-
-I hope this birthday brings you everything you've been working for—good health, happiness, success, and plenty of opportunities. Keep being the same hardworking, genuine, and fun person that you are. I'm sure you'll achieve all the goals you've set for yourself.
-
-Thanks for always being a great friend. Here's to making even more unforgettable memories together, celebrating more milestones, and supporting each other through whatever comes next.
-
-Enjoy your special day, have lots of fun, and don't forget to save me a piece of cake!
-
-Happy Birthday once again, Yatharth!`,
-    giftMessage: "Here is a special surprise just for you!",
+    personalMessage: "Dear Yatharth,\n\nHappy Birthday, buddy! 🎉\n\nI just wanted to wish you an amazing birthday and an even better year ahead. You're one of those friends who makes every conversation fun, and I'm really glad we've shared so many great memories together. Whether it's random jokes, late-night chats, or just spending time together, it's always a good time.\n\nI hope this year brings you success in everything you're working towards, along with good health, happiness, and plenty of new opportunities. Keep being the hardworking, genuine, and positive person you are. I'm sure you'll achieve everything you've set your mind to.\n\nHave an awesome day, enjoy every moment, and make some unforgettable memories. Wishing you nothing but the very best.\n\nHappy Birthday once again! 🎂🥳\n\nYour friend,\nPrakhar",
+    giftMessage: "college mai dunga gift aapko ",
     footerMessage: "Made by Prakhar",
   },
   media: {
-    profilePhoto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000",
+    profilePhoto: "https://photos.app.goo.gl/YurNQRg8pkiAcPgJ6",
     background: "https://images.unsplash.com/photo-1517260739337-6799d239ce83?q=80&w=2070&auto=format&fit=crop",
-    music: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    music: "/music.m4a",
     video: "",
   },
   animations: {
