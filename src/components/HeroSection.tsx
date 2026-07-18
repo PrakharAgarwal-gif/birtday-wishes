@@ -49,7 +49,7 @@ export default function HeroSection() {
           {config.recipient.name}
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
-          Today is your special day! {config.messages.personalMessage}
+          Today is your special day! Wishing you the happiest of birthdays. You mean the world to me and I hope all your dreams come true!
         </p>
       </motion.div>
 

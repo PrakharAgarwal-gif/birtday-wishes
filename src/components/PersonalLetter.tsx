@@ -16,7 +16,7 @@ export default function PersonalLetter() {
     }
   };
 
-  const messageLetters = Array.from((config.messages.personalMessage || "") as string);
+  const messageWords = ((config.messages.personalMessage || "") as string).split(/(\s+)/);
 
   return (
     <section className="py-20 px-4 min-h-screen flex flex-col items-center justify-center relative">
@@ -55,7 +55,7 @@ export default function PersonalLetter() {
             initial={{ y: 0, opacity: 0 }}
             animate={isOpen ? { y: -200, opacity: 1, scale: 1.2 } : {}}
             transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
-            className="absolute top-4 left-4 right-4 h-[500px] bg-[#fffdf0] z-20 rounded shadow-xl p-8"
+            className="absolute top-4 left-4 right-4 h-[500px] bg-[#fffdf0] z-20 rounded shadow-xl p-6 overflow-y-auto custom-scrollbar"
             style={{
               backgroundImage: "url('https://www.transparenttextures.com/patterns/handmade-paper.png')",
               boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
@@ -65,17 +65,17 @@ export default function PersonalLetter() {
               Dear {config.recipient.nickname || config.recipient.name},
             </h3>
             
-            <p className="font-inter text-gray-700 text-lg leading-relaxed whitespace-pre-wrap">
+            <div className="font-inter text-gray-700 text-[15px] leading-relaxed whitespace-pre-wrap">
               {isReading && (
-                <motion.span
+                <motion.div
                   initial="hidden"
                   animate="visible"
                   variants={{
-                    visible: { transition: { staggerChildren: 0.03 } },
+                    visible: { transition: { staggerChildren: 0.05 } },
                     hidden: {}
                   }}
                 >
-                  {messageLetters.map((char: string, index: number) => (
+                  {messageWords.map((word: string, index: number) => (
                     <motion.span
                       key={index}
                       variants={{
@@ -83,19 +83,19 @@ export default function PersonalLetter() {
                         hidden: { opacity: 0 }
                       }}
                     >
-                      {char}
+                      {word}
                     </motion.span>
                   ))}
-                </motion.span>
+                </motion.div>
               )}
-            </p>
+            </div>
 
             {isReading && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: messageLetters.length * 0.03 + 1 }}
-                className="mt-12 text-right"
+                transition={{ delay: messageWords.length * 0.05 + 1 }}
+                className="mt-8 text-right pb-4"
               >
                 <p className="font-outfit text-xl text-pink-600">Your friend,</p>
                 <p className="font-inter text-gray-600 text-lg">Prakhar</p>
