@@ -46,7 +46,9 @@ export default function MusicPlayer() {
 
   return (
     <div className="fixed top-6 right-6 z-50">
-      <audio ref={audioRef} src={config.media.music} loop />
+      {config.media.music ? (
+        <audio ref={audioRef} src={config.media.music} loop />
+      ) : null}
 
       <div className="flex items-center gap-2">
         <AnimatePresence>
