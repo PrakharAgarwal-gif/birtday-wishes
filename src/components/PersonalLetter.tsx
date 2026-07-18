@@ -49,20 +49,20 @@ export default function PersonalLetter() {
           {/* The Letter */}
           <motion.div
             initial={{ y: 0, opacity: 0, zIndex: 20 }}
-            animate={isOpen ? { y: -60, opacity: 1, scale: 1.1, zIndex: 50 } : { y: 0, opacity: 0, scale: 1, zIndex: 20 }}
+            animate={isOpen ? { y: -100, opacity: 1, scale: 1.05, zIndex: 50 } : { y: 0, opacity: 0, scale: 1, zIndex: 20 }}
             transition={{ 
               delay: 0.5, 
               duration: 1.5, 
               ease: "easeOut",
               zIndex: { delay: isOpen ? 1.5 : 0 } 
             }}
-            className="absolute top-4 left-4 right-4 h-auto min-h-[400px] max-h-[85vh] bg-[#fffdf0] rounded shadow-xl p-6 md:p-8 overflow-y-auto custom-scrollbar"
+            className="absolute top-4 left-4 right-4 h-max min-h-[400px] bg-[#fffdf0] rounded shadow-xl p-6 sm:p-8"
             style={{
               backgroundImage: "url('https://www.transparenttextures.com/patterns/handmade-paper.png')",
               boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
             }}
           >
-            <div className="font-inter text-gray-800 text-base md:text-[17px] leading-relaxed whitespace-pre-wrap pb-4">
+            <div className="font-inter text-gray-800 text-[13px] sm:text-[14px] leading-relaxed whitespace-pre-wrap pb-4">
               {config.messages.personalMessage}
             </div>
           </motion.div>
